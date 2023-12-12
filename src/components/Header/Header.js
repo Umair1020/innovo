@@ -121,13 +121,28 @@ const Header = () => {
                          
                             <Link to="/technology">Technologies</Link>
                             <Link to="/portfolio">Portfolio</Link>
-
+                       
+                            <div className="button my-5 mt-4 mx-auto">
+                                <button
+                                    style={{
+                                        background: 'rgba(255, 201, 62, 1)',
+                                        fontWeight: '600',
+                                        borderRadius: '27px',
+                                        padding: '10px',
+                                        border: 'none',
+                                    }}
+                                    onClick={handleContactClick} // Trigger the popup display on button click
+                                >
+                                    Contact Us
+                                </button>
+                           
+                        </div>
                         </div>
                     </div>
                     <span className="w-25 my-3 mt-3 " style={{ marginLeft: "100px", fontSize: '30px', cursor: 'pointer', color: "#fff" }} onClick={openNav}><FaBars /></span>
                 
                 </div>
-
+                {showPopup && <Popupcard />}
             </Mobile >
         </>
     )

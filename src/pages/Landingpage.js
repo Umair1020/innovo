@@ -16,6 +16,9 @@ import { Link } from "react-router-dom";
 const Landingpage = () => {
   const [filter, setFilter] = useState('web-design');
 
+  const handleContactClick = () => {
+      setShowPopup(true);
+  };
   const portfolioData = [
     {
       category: 'social-media',
@@ -263,7 +266,7 @@ const Landingpage = () => {
               <h1 className="sech1">We Are A Creative <br />
                 Digital Agency</h1> <br />
               <p>We're a dynamic digital agency fueling creativity to craft immersive brand experiences. With a blend of innovation and expertise, we sculpt compelling narratives, design captivating visuals, and engineer digital strategies that elevate brands to new heights. At our core, we're storytellers, breathing life into brands through the power of digital</p>
-              <button className="button" style={{ background: "rgba(255, 201, 62, 1)", borderRadius: "27px", padding: "10px", border: "none" }}>Contact Us</button>
+              <button className="button" style={{ background: "rgba(255, 201, 62, 1)", borderRadius: "27px", padding: "10px", border: "none" }}  onClick={handleContactClick} >Contact Us</button>
             </div>
             <div class="col-lg-6 col-md-5 ">
               <br />
